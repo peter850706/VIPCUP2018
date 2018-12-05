@@ -27,7 +27,7 @@ TABLE = {'LUNG1-015': {'PTV1': 'PTV1', 'CTV1': 'GTV1'}, 'LUNG1-057': {'PTV1': 'P
          'LUNG1-306': {'PTV1': 'PTV1', 'CTV1': 'GTV1'}, 'LUNG1-311': {'PTV1': 'PTV1', 'CTV1': 'GTV1'}, 
          'LUNG1-315': {'PTV1': 'PTV1', 'CTV1': 'GTV1'}, 'LUNG1-321': {'PTV1': 'PTV1', 'CTV1': 'GTV1'}}
 
-with open('/auto/master07/peter850706/niftynet/models/VIPCUP/dataset_split_PTV1.csv', 'w') as file:
+with open('dataset_split_PTV1.csv', 'w') as file:
     writer = csv.writer(file)
     for path, classification in zip([TRAINING_PATH, VALIDATION_PATH, TEST_PATH], ['Training', 'Validation', 'Inference']):
         input_path = path
@@ -44,7 +44,7 @@ with open('/auto/master07/peter850706/niftynet/models/VIPCUP/dataset_split_PTV1.
                 _name = name[:5] + name[6:]
                 writer.writerow([_name, input_classification])
 
-with open('/auto/master07/peter850706/niftynet/models/VIPCUP/dataset_split_CTV1.csv', 'w') as file:
+with open('dataset_split_CTV1.csv', 'w') as file:
     writer = csv.writer(file)
     for path, classification in zip([TRAINING_PATH, VALIDATION_PATH, TEST_PATH], ['Training', 'Validation', 'Inference']):
         input_path = path
@@ -61,7 +61,7 @@ with open('/auto/master07/peter850706/niftynet/models/VIPCUP/dataset_split_CTV1.
                 _name = name[:5] + name[6:]
                 writer.writerow([_name, input_classification])
 
-with open('/auto/master07/peter850706/niftynet/models/VIPCUP/dataset_split_GTV1.csv', 'w') as file:
+with open('dataset_split_GTV1.csv', 'w') as file:
     writer = csv.writer(file)
     for path, classification in zip([TRAINING_PATH, VALIDATION_PATH, TEST_PATH], ['Training', 'Validation', 'Inference']):
         input_path = path
